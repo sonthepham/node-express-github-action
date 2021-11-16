@@ -3,7 +3,7 @@ WORKDIR /usr/src/app
 COPY package*.json ./
 RUN npm ci
 COPY src src
-COPY babel.config ./
+COPY babel.config.js ./
 RUN npm run build
 
 FROM node:14-alpine
